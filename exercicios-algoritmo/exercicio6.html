@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira o sabor da pizza:
+    <input id="input_sabor_pizza" type="text"><br>
+
+    Insira o preço da pizza:
+    <input id="input_preco_pizza" type="number"><br>
+
+    Insira quantas pessoas irão comer:
+    <input id="input_pessoas_comer" type="number"><br>
+
+   <button onclick="valor_pessoa()">
+    Ver valor por pessoa
+    </button>
+
+    <div id="div_decisao">
+
+    </div>
+</body>
+</html>
+<script>
+    function valor_pessoa(){
+
+        var saborPizza = input_sabor_pizza.value;
+        var valorPizza = Number(input_preco_pizza.value) ;
+        var valorPessoa = Number(input_preco_pizza.value) / Number(input_pessoas_comer.value);
+        var gorjeta = (Number(input_preco_pizza.value) * 10) / 100;
+
+        div_decisao.innerHTML =`
+        
+            Cada amigo vai colaborar com ${valorPessoa} para a pizza de ${saborPizza} e também a caixinha do entregador
+             de: ${gorjeta}   
+        
+        `
+    }
+</script>

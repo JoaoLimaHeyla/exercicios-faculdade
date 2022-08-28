@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira o valor da passagem de ônibus:
+    <input id="input_passagem" type="number"><br>
+
+    Insira o número de viagens que efetua ao mês:
+    <input id="input_viagens" type="number"><br>
+
+    Insira a distância entre sua casa e o trabalho em KM:
+    <input id="input_distancia" type="number"><br>
+
+    <button onclick="calcularVT()">Calcular VT</button>
+
+    <div id="div_VTcalculado"></div>
+</body>
+</html>
+<script>
+    function calcularVT(){
+        var valorKmAPP = Number(input_distancia.value) * 0.75;
+        var viagemAPP = (Number(input_viagens.value) * 10) / 100;
+        var viagem = Number(input_viagens.value)
+        var valorPassagem = Number(input_passagem.value)
+
+        div_VTcalculado.innerHTML = `
+            
+            Você vai gastar ${(viagem * valorPassagem + valorKmAPP) - viagemAPP} por mês com transporte.
+        
+        `
+    }
+</script>

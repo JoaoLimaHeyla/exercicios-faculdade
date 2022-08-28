@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira a quantidade de lotes:<br>
+    <input id="quantdLote"><br>
+    Insira o valor do lote:<br>
+    <input id="precoLote"><br>
+    Insira a quantidade de lote perdido:<br>
+    <input id="loteVal"><br>
+
+    <button onclick="total()">Calcular</button><br>
+    <button onclick="limpar()">Limpar resultado</button>
+
+    <div id="valorTotal">
+        Total da perda: <span id="despesa">0.00</span>
+    </div>
+</body>
+</html>
+<script>
+    var totalLote = 0;
+    var perdido = 0;
+
+    // qtdLote = x  prçLote = y   eficiência(N) = 80%
+
+    function total(){
+        var loteValidado = Number(loteVal.value);
+        var prclote = Number(precoLote.value);
+        var qtdlote = Number(quantdLote.value);
+        
+        totalLote = prclote * qtdlote ;
+        perdido = (loteValidado * totalLote) / qtdlote;
+
+        despesa.innerHTML = `Total gasto: R$${totalLote} <br>
+            Despesa de: R$${perdido} `
+    }
+
+    function limpar(){
+        totalLote = 0;
+        perdido = 0;
+
+        despesa.innerHTML = `Total gasto: R$${totalLote} <br>
+            Despesa de: R$${perdido} `
+    }
+</script>

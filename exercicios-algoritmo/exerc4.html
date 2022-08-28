@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira a quantidade de votos do candidato A:
+    <input id="candidatoA" type="number"> <br>
+    Insira a quantidade de votos do candidato B:
+    <input id="candidatoB" type="number"> <br>
+    Insira a quantidade de votos em branco: 
+    <input id="votosBrancos" type="number"> <br>
+    Insira a quantidade de votos nulos: 
+    <input id="votosNulos" type="number"> <br>
+
+    <button onclick="resultado()">Resultado da eleição</button>
+
+    <div id="total_votos">
+
+    </div>
+</body>
+</html>
+<script>
+    function resultado(){
+        total_votos.innerHTML= 
+        "Total de votos: " + (Number(candidatoA.value) + Number(candidatoB.value) + Number(votosBrancos.value) + Number(votosNulos.value)) + "<br>" +
+        "Candidato A: " + Number(candidatoA.value) * 0.1 + "%" + " (" + Number(candidatoA.value) + "votos)" + "<br>" +
+        "Candidato B: " + Number(candidatoB.value) * 0.1 + "%" + " (" + Number(candidatoB.value) + "votos)" + "<br>" +
+        "Votos inválidos: " + ((Number(votosBrancos.value) * 0.1) + (Number(votosNulos.value) * 0.1)) + "%" + " (" + 
+        (Number(votosBrancos.value)+ Number(votosNulos.value)) + " votos)"
+    }
+</script>

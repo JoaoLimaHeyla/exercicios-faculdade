@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Insira o ki base de um super sayajin:
+    <input id="input_ki" type="number"><br>
+    
+    Transformar em...
+
+    <button onclick="transformar_ssj()">SSJ</button>
+    <button onclick="transformar_ssj2()">SSJ2</button>
+    <button onclick="transformar_ssj3()">SSJ3</button>
+    
+    <div id="div_ssjFinal">
+
+    </div>
+</body>
+</html>
+<script>
+
+    var ssj = Number(input_ki.value) * 50
+    var ssj2 = Number(input_ki.value) * 100
+    var ssj3 = Number(input_ki.value) * 200
+
+    function transformar_ssj(){
+        var ssj = Number(input_ki.value) * 50
+
+        div_ssjFinal.innerHTML = `
+            Após se transformar em SSJ, o ki desse Sayajin passa a ser de ${ssj}
+
+        `
+    }
+    
+    function transformar_ssj2(){
+        var ssj2 = Number(input_ki.value) * 100
+        
+        div_ssjFinal.innerHTML = `
+            Após se transformar em SSJ2, o ki desse Sayajin passa a ser de ${ssj2}
+
+        `
+    }
+
+    function transformar_ssj3(){
+        var ssj3 = Number(input_ki.value) * 200
+
+        div_ssjFinal.innerHTML = `
+            Após se transformar em SSJ3, o ki desse Sayajin passa a ser de ${ssj3}
+
+        `
+    }
+    
+
+</script>
